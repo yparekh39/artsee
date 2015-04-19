@@ -1,13 +1,13 @@
 var behance_api_key = "kVdG80vj5LranYUY2MzSu5cge0GTLsR7";
 var image;
-var rand_int = (Math.floor(Math.random()*66)+1);
+var rand_int = (Math.floor(Math.random()*11));
 
 
 be(behance_api_key).fields(function success(results){
 	//console.log(rand_int);
 	//console.log(results.fields[rand_int]);
 	//console.log(results.fields[rand_int]);
-	var firstField = results.fields[rand_int];
+	var firstField = results.popular[rand_int];
 	//console.log(escape(firstField.name.toLowerCase()).replace(/%20/g, '+'));
 	var query =
 		{
