@@ -31,6 +31,10 @@ a:link{
   text-decoration: none;
   color: #AF5D00
 }
+a:hover{
+  text-decoration: none;
+  color: #C59865;
+}
 .dislike:visited{
   outline: none;
 }
