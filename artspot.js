@@ -43,12 +43,24 @@ var like = function(fieldName){
 	var name;
 	switch(fieldName){
 		case "art+direction":
-			name = fieldName;
+			name = "artDirection";
 			break;
-		case "branding":
-			name = fieldName;
+		case "graphic+design":
+			name = "graphicDesign";
 			break;
-		case "fashion":
+		case "industrial+design":
+			name = "industrialDesign";
+			break;
+		case "interaction+design":
+			name = "interactionDesign";
+			break;
+		case "motion+graphics":
+			name = "motionGraphics";
+			break;
+		case "web+design":
+			name = "webDesign";
+			break;
+		default:
 			name = fieldName;
 			break;
 	}
@@ -56,18 +68,42 @@ var like = function(fieldName){
 	var query = new Parse.Query(Field);
 	query.get("quMP49JkBm", {
 		success: function(field){
-			field.increment(fieldName);
+			field.increment(name);
 			field.save();
 		}
 	});
 };
 
 var dislike = function(fieldName){
+	var name;
+	switch(fieldName){
+		case "art+direction":
+			name = "artDirection";
+			break;
+		case "graphic+design":
+			name = "graphicDesign";
+			break;
+		case "industrial+design":
+			name = "industrialDesign";
+			break;
+		case "interaction+design":
+			name = "interactionDesign";
+			break;
+		case "motion+graphics":
+			name = "motionGraphics";
+			break;
+		case "web+design":
+			name = "webDesign";
+			break;
+		default:
+			name = fieldName;
+			break;
+	}
 	var Field = Parse.Object.extend("Fields");
 	var query = new Parse.Query(Field);
 	query.get("quMP49JkBm", {
 		success: function(field){
-			field.decrement(fieldName);
+			field.decrement(name);
 			field.save();
 		}
 	});
