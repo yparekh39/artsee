@@ -38,6 +38,11 @@ function getImage(){
 				link.appendChild(title);
 				box.appendChild(header);
 				box.className = "Box";
+	
+				var views = document.createTextNode(results3.project.stats.views +" "+ "views");
+				views.className = "Views";
+				box.appendChild(views);
+				
 				var header2 = document.createElement("h2");
 				for(var i = 0; i < results3.project.owners.length; ++i){
 					var text = results3.project.owners[i].first_name + results3.project.owners[i].last_name;
