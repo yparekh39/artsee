@@ -37,7 +37,9 @@ function getImage(){
 				box.className = "Box";
 				var header2 = document.createElement("h3");
 				for(var i = 0; i < results3.project.owners.length; ++i){
-					var author = document.createTextNode(results3.project.owners[i].first_name+" "+ results3.project.owners[i].last_name);
+					var text = results3.project.owners[i].first_name + results3.project.owners[i].last_name;
+					if(i < results3.project.owners.length-1){text += "|";}
+					var author = document.createTextNode(text);
 					header2.appendChild(author);
 				}
 				box.appendChild(header2);
