@@ -21,7 +21,9 @@ be(behance_api_key).fields(function success(results){
 		
 		be(behance_api_key).project(results2.projects[0].id, function success(results3){
 			console.log(results3);
-			image = results3.project.modules[0].src;
+			var i = 0;
+			while(results3.project.modules[i].type != "image"){i++;}
+			image = results3.project.modules[i].src;
 			console.log(image);
 			var DOM_img = document.createElement("img");
 			DOM_img.src = image;
