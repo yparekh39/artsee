@@ -39,8 +39,27 @@ var whichField = function(){
 	});
 };
 
+var like = function(fieldName){
+	var Field = Parse.Object.extend("Fields");
+	var query = new Parse.Query(Field);
+	query.get("quMP49JkBm", {
+		success: function(field){
+			field.increment(fieldName);
+			field.save();
+		}
+	});
+};
 
-
+var dislike = function(fieldName){
+	var Field = Parse.Object.extend("Fields");
+	var query = new Parse.Query(Field);
+	query.get("quMP49JkBm", {
+		success: function(field){
+			field.decrement(fieldName);
+			field.save();
+		}
+	});
+};
 /*var user = new Parse.User();
 user.set("username", "yash");
 user.set("password", "pass");

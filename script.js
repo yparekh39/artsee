@@ -1,8 +1,8 @@
 var behance_api_key = "kVdG80vj5LranYUY2MzSu5cge0GTLsR7";
 var image;
-var rand_int = (Math.floor(Math.random()*10)+1);
+var getImage = function(){
 
-
+	var rand_int = (Math.floor(Math.random()*10)+1);
 	var query =
 		{
 			field: whichField(),
@@ -34,11 +34,7 @@ var rand_int = (Math.floor(Math.random()*10)+1);
 			document.body.appendChild(header2);
 		});
 	});
-	
-	
-
-
-
+};
 
 
 
