@@ -1,6 +1,8 @@
 body{
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: 200;
+  background-color: rgba(197, 152, 101, .15);
+
 }
 .Image{
   display: block;
@@ -15,7 +17,7 @@ body{
 }
 
 .Box{
-   position:absolute;
+   position:fixed;
    width:300px;
    right:0;
    top:0;
