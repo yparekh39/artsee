@@ -40,6 +40,18 @@ var whichField = function(){
 };
 
 var like = function(fieldName){
+	var name;
+	switch(fieldName){
+		case "art+direction":
+			name = fieldName;
+			break;
+		case "branding":
+			name = fieldName;
+			break;
+		case "fashion":
+			name = fieldName;
+			break;
+	}
 	var Field = Parse.Object.extend("Fields");
 	var query = new Parse.Query(Field);
 	query.get("quMP49JkBm", {

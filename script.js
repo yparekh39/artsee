@@ -1,9 +1,10 @@
 var behance_api_key = "kVdG80vj5LranYUY2MzSu5cge0GTLsR7";
 var image;
+var query;
 var getImage = function(){
 
 	var rand_int = (Math.floor(Math.random()*10)+1);
-	var query =
+	query =
 		{
 			field: whichField(),
 			//field: "fine+arts",
@@ -34,6 +35,11 @@ var getImage = function(){
 			document.body.appendChild(header2);
 		});
 	});
+};
+
+var scriptLike = function(){
+	console.log(query);
+	like(query.field);
 };
 
 
