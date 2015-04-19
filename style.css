@@ -12,10 +12,11 @@
 
 .Box{
    position:absolute;
-   width:350px;
+   width:300px;
    right:0;
    top:0;
    margin-top:100px;
+   margin-right:50px;
    text-align:left;
    color:#828282;
 }
@@ -33,7 +34,7 @@
   border-radius: 2px;
 
 	position:absolute;
-	width:350px;
+	width:300px;
 	right:0;
 }
 
@@ -44,16 +45,6 @@
   margin-left:20px;
   text-align:right;
   color:#828282;
-}
-
-#sidebar {
-	background:#F7F7F7;
-	float:right;
-	font-size:95%;
-	line-height:145%;
-	overflow:hidden;
-	padding-top:8px;
-	width:300px;
 }
 
 .name{
