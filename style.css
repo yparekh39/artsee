@@ -20,9 +20,8 @@
    color:#828282;
 }
 
-input[type="image"]:hover{
-	opacity:100%;
-	background-color:#1C0F00;
+.dislike :hover{
+	visibility:hidden;
 }
 
 .left{
@@ -59,7 +58,7 @@ input[type="image"]:hover{
 
 .action{
   position:fixed;
-  -webkit-filter:opacity(30%);
+  -webkit-filter:opacity(70%);
 }
 
 .action ul { 
