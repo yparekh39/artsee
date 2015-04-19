@@ -31,7 +31,7 @@ input[type="image"]{
 }
 a:link{
   text-decoration: none;
-  color: #AF5D00
+  color: #AF5D00;
 }
 a:hover{
   text-decoration: none;
@@ -59,7 +59,6 @@ a:hover{
   -webkit-border-radius: 2;
   -moz-border-radius: 2;	
   border-radius: 2px;
-   
    position:absolute;
    width:300px;
    right:0;
@@ -81,7 +80,7 @@ a:hover{
 	height:100%;
 	width: 350px;
 	background: #1C0F00;
-;
+
 }
 
 .name{
