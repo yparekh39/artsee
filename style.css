@@ -20,14 +20,27 @@
    text-align:left;
    color:#828282;
 }
-
+input[type="image"]{
+  outline:none;
+}
+.dislike:visited{
+  outline: none;
+}
+.like:visited{
+  outline: none;
+}
 .dislike:hover{
     opacity: 0.5;
 }
 .like:hover{
     opacity: 0.5;
 }
-
+.dislike:active{
+  outline: none;
+}
+.like:active{
+  outline: none;
+}
 .Authors{
   -webkit-border-radius: 2;
   -moz-border-radius: 2;	

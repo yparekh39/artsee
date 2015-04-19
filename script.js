@@ -11,9 +11,9 @@ function getImage(){
 				page: rand_int
 			}
 			console.log(query.field);
-
+		var rand2 = (Math.floor(Math.random()*12)+1);
 		be(behance_api_key).project.search(query, function success(results2){
-			be(behance_api_key).project(results2.projects[0].id, function success(results3){
+			be(behance_api_key).project(results2.projects[rand2].id, function success(results3){
 				console.log(results3);
 				var i = 0;
 				while(results3.project.modules[i].type != "image"){i++;}
@@ -38,7 +38,7 @@ function getImage(){
 				var header2 = document.createElement("h3");
 				for(var i = 0; i < results3.project.owners.length; ++i){
 					var text = results3.project.owners[i].first_name + results3.project.owners[i].last_name;
-					if(i < results3.project.owners.length-1){text += "|";}
+					text += "\n";
 					var author = document.createTextNode(text);
 					header2.appendChild(author);
 				}
