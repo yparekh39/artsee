@@ -28,6 +28,10 @@
 }
 
 .Authors{
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;	
+  border-radius: 2px;
+
 	position:absolute;
 	width:350px;
 	right:0;
@@ -40,6 +44,16 @@
   margin-left:20px;
   text-align:right;
   color:#828282;
+}
+
+#sidebar {
+	background:#F7F7F7;
+	float:right;
+	font-size:95%;
+	line-height:145%;
+	overflow:hidden;
+	padding-top:8px;
+	width:300px;
 }
 
 .name{
