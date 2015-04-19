@@ -1,24 +1,16 @@
 var behance_api_key = "kVdG80vj5LranYUY2MzSu5cge0GTLsR7";
 var image;
-var rand_int = (Math.floor(Math.random()*11));
+var rand_int = (Math.floor(Math.random()*10)+1);
 
 
-be(behance_api_key).fields(function success(results){
-	//console.log(rand_int);
-	//console.log(results.fields[rand_int]);
-	//console.log(results.fields[rand_int]);
-	var firstField = results.popular[rand_int];
-	//console.log(escape(firstField.name.toLowerCase()).replace(/%20/g, '+'));
 	var query =
 		{
-			field: escape(firstField.name.toLowerCase().replace(/%20/g, '+')),
+			field: whichField(),
 			//field: "fine+arts",
-			page: "2"
+			page: rand_int
 		}
 	be(behance_api_key).project.search(query, function success(results2){
 		//console.log(results2);
-		
-		
 		be(behance_api_key).project(results2.projects[0].id, function success(results3){
 			//console.log(results3);
 			var i = 0;
@@ -32,8 +24,6 @@ be(behance_api_key).fields(function success(results){
 		});
 	});
 	
-	
-});
 
 
 
