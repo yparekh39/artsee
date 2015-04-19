@@ -1,12 +1,14 @@
 Parse.initialize("JKQCC3NxhfPOR6f43hZFlc5fcHkqdoWY98H9cfTo", "qYSzrmcDWVADqc4N5UuiOPCxseBEVaVFF0JJL9yq");
-var whichField = function(){
+function whichField(callback){
 	var Field = Parse.Object.extend("Fields");
 	var query = new Parse.Query(Field);
+	var returnVal;
+	var choice;
 	query.get("quMP49JkBm", {
 	  success: function(field) {
 	  	//var total = field.get("architecture")+field.get("branding")+field.get("fashion")+field.get("illustration")+field.get("photography")+field.get("artDirection")+field.get("graphicDesign")+field.get("industrialDesign")+field.get("interactionDesign")+field.get("motionGraphics")+field.get("webDesign");
 	  	//var numChoice = Math.floor(Math.random()*total);
-	  	var choice;
+	 	
 	  	
 	  	var rand = function(min, max) {
 	    	return Math.random() * (max - min) + min;
@@ -33,13 +35,14 @@ var whichField = function(){
 		var list = ["architecture", "branding", "fashion", "illustration", "photography", "art+direction", "graphic+design", "industrial+design", "interaction+design", "motion+graphics", "web+design"];
 	  	var weight = [field.get("architecture"), field.get("branding"), field.get("fashion"), field.get("illustration"), field.get("photography"), field.get("artDirection"), field.get("graphicDesign"), field.get("industrialDesign"), field.get("interactionDesign"), field.get("motionGraphics"), field.get("webDesign")];
 	  	choice = getRandomItem(list, weight);
-	  	console.log(choice)
+	  	console.log(choice);
+	  	callback(choice);
 	    // The object was retrieved successfully.
 	  }
 	});
-};
+}
 
-var like = function(fieldName){
+function like(fieldName){
 	var name;
 	switch(fieldName){
 		case "art+direction":
@@ -72,9 +75,9 @@ var like = function(fieldName){
 			field.save();
 		}
 	});
-};
+}
 
-var dislike = function(fieldName){
+function dislike(fieldName){
 	var name;
 	switch(fieldName){
 		case "art+direction":
@@ -103,11 +106,12 @@ var dislike = function(fieldName){
 	var query = new Parse.Query(Field);
 	query.get("quMP49JkBm", {
 		success: function(field){
-			field.decrement(name);
+			field.increment(name, -1);
 			field.save();
 		}
 	});
-};
+
+}
 /*var user = new Parse.User();
 user.set("username", "yash");
 user.set("password", "pass");
