@@ -90,9 +90,8 @@ a:hover{
 .tagline{
   text-align:center;
   text-size:50px;
-  color:#ffffff;
+  color:rgba(197, 152, 101, 1);
 }
-
 .description{
   -webkit-border-radius: 8;
   -moz-border-radius: 8;	
