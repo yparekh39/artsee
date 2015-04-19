@@ -30,17 +30,28 @@ function getImage(){
 				document.body.appendChild(DOM_img);
 				var box = document.createElement("p");
 				//box.id = "removeBox";
-				var header = document.createElement("h1");
+				var header = document.createElement("h2");
 				var title = document.createTextNode(results3.project.name);
 				header.appendChild(title);
 				box.appendChild(header);
 				box.className = "Box";
-				var header2 = document.createElement("h2");
+				var header2 = document.createElement("h3");
 				for(var i = 0; i < results3.project.owners.length; ++i){
 					var author = document.createTextNode(results3.project.owners[i].first_name+" "+ results3.project.owners[i].last_name);
 					header2.appendChild(author);
 				}
 				box.appendChild(header2);
+				
+				var authors = document.createElement("ul");
+				authors.className="Authors";
+				
+				for (var j = 0; j < results3.project.owners.length; ++j){
+					var pro_pic = document.createElement("img");
+					pro_pic.src = results3.project.owners[j].images[50];
+					authors.appendChild(pro_pic);
+				}
+				box.appendChild(authors);
+				
 				document.body.appendChild(box);
 			});
 		});
