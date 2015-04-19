@@ -1,5 +1,7 @@
 $(function() {
 
+  alert("Hello");
+  
   Parse.$ = jQuery;
 
    Parse.initialize("mP9fATtA72KmHiH67v94mBbHgbZNI1VykBjUE6Jq", 
