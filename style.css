@@ -1,5 +1,5 @@
 .Image{ 
-  padding-top: 200px;
+  padding-top: 50px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -10,7 +10,16 @@
 
 .name{
   margin-top:30px;
-  margin-bottom:15px;
-  position:relative;
-  left:122px;
+  text-align:center;
+}
+
+.action{
+  position: absolute;
+  padding-top:20px;
+  padding-bottom:20px;
+  margin-right:80px;
+  margin-top:120px;
+  right: 40px;
+  width: 200px;
+  background-color: #b0e0e6;
 }
