@@ -60,8 +60,20 @@ input[type="image"]{
   color:#828282;
 }
 
+.left-bar {
+	position:absolute;
+	left:0; bottom: 0; top:0;
+	height:auto;
+	width: 350px;
+	background: #C59865;
+}
+
 .name{
   margin-top:30px;
+}
+
+.tagline{
+  text-size:50px;
 }
 
 .description{
