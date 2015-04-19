@@ -1,3 +1,7 @@
+body{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 200;
+}
 .Image{
   display: block;
   border: 3px solid #C59865;
@@ -23,6 +27,14 @@
 input[type="image"]{
   outline:none;
 }
+a:link{
+  text-decoration: none;
+  color: #AF5D00
+}
+a:hover{
+  text-decoration: none;
+  color: #C59865;
+}
 .dislike:visited{
   outline: none;
 }
@@ -45,8 +57,6 @@ input[type="image"]{
   -webkit-border-radius: 2;
   -moz-border-radius: 2;	
   border-radius: 2px;
-   
-   border:1px solid #AF5D00;
    
    position:absolute;
    width:300px;

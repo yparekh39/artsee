@@ -30,12 +30,15 @@ function getImage(){
 				document.body.appendChild(DOM_img);
 				var box = document.createElement("p");
 				//box.id = "removeBox";
-				var header = document.createElement("h2");
+				var header = document.createElement("h1");
+				var link = document.createElement("a");
+				link.href=results3.project.url;
 				var title = document.createTextNode(results3.project.name);
-				header.appendChild(title);
+				header.appendChild(link);
+				link.appendChild(title);
 				box.appendChild(header);
 				box.className = "Box";
-				var header2 = document.createElement("h3");
+				var header2 = document.createElement("h2");
 				for(var i = 0; i < results3.project.owners.length; ++i){
 					var text = results3.project.owners[i].first_name + results3.project.owners[i].last_name;
 					text += "\n";
