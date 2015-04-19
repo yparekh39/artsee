@@ -18,7 +18,6 @@ be(behance_api_key).fields(function success(results){
 	be(behance_api_key).project.search(query, function success(results2){
 		//console.log(results2);
 		
-		
 		be(behance_api_key).project(results2.projects[0].id, function success(results3){
 			//console.log(results3);
 			var i = 0;
