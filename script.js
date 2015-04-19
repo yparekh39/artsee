@@ -8,10 +8,16 @@ be(behance_api_key).fields(function success(results){
 	console.log(results.fields[rand_int]);
 	console.log(results.fields[rand_int]);
 	var firstField = results.fields[rand_int];
-	console.log(escape(firstField.name.toLowerCase()).replace(/%20/g, '%2B'));
-	
-	be(behance_api_key).project.search(field=escape(firstField.name.toLowerCase().replace(/%20/g, '%2B')), function success(results2){
+	console.log(escape(firstField.name.toLowerCase()).replace(/%20/g, '+'));
+	var query =
+		{
+			field: escape(firstField.name.toLowerCase().replace(/%20/g, '+')),
+			//field: "fine+arts",
+			page: "2"
+		}
+	be(behance_api_key).project.search(query, function success(results2){
 		console.log(results2);
+		
 		
 		be(behance_api_key).project(results2.projects[0].id, function success(results3){
 			console.log(results3);
