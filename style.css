@@ -36,14 +36,10 @@
   position:relative;
   margin-left: auto;
   margin-right: auto;
-  width: 30em;
+  width: 15em;
   -webkit-filter:opacity(30%);
 }
 
-.action .img {
-   margin:100px;
-}
-
-.ul{
-  color:#ffffff
+.action ul { 
+  display:inline;
 }
