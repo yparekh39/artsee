@@ -22,17 +22,21 @@ var getImage = function(){
 			DOM_img.className = "Image";
 			document.body.appendChild(DOM_img);
 			
+			var box = document.createElement("p");
+			
 			var header = document.createElement("h1");
 			var title = document.createTextNode(results3.project.name);
 			header.appendChild(title);
-			document.body.appendChild(header);
+			box.appendChild(header);
+			box.className = "Box";
 			
 			var header2 = document.createElement("h2");
 			for(var i = 0; i < results3.project.owners.length; ++i){
 				var author = document.createTextNode(results3.project.owners[i].first_name+" "+ results3.project.owners[i].last_name);
 				header2.appendChild(author);
 			}
-			document.body.appendChild(header2);
+			box.appendChild(header2);
+			document.body.appendChild(box);
 		});
 	});
 };

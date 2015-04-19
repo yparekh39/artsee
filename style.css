@@ -10,6 +10,12 @@
   width: auto;
 }
 
+.Box{
+   display:block;
+   margin-left: 20px;
+   color:#828282;
+}
+
 .left{
   position:absolute;
   width: 250px;
@@ -43,3 +49,5 @@
 .action ul { 
   display:inline;
 }
+
+
