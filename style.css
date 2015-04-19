@@ -26,6 +26,11 @@ body{
    text-align:left;
    color:#828282;
 }
+
+.Views{
+	font-weight:300;
+}
+
 input[type="image"]{
   outline:none;
 }
