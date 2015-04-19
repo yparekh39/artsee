@@ -75,7 +75,7 @@ a:hover{
   width: 250px;
   margin-left:30px;
   text-align:right;
-  font-size:40px;
+  text-size:50px;
   color:#828282;
 }
 
@@ -92,10 +92,13 @@ a:hover{
   margin-top:30px;
 }
 
-.tagline{
+.tagline p{
   text-align:center;
   text-size:50px;
   color:rgba(197, 152, 101, 1);
+}
+.about{
+  text-align: justify;
 }
 .description{
   -webkit-border-radius: 8;
