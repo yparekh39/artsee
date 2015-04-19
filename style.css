@@ -19,10 +19,11 @@
    text-align:left;
    color:#828282;
 }
-
-
-.dislike :hover{
-	content:url('img/dislikehover.png');
+.dislike:hover{
+    opacity: 0.5;
+}
+.like:hover{
+    opacity: 0.5;
 }
 
 .left{
