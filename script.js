@@ -3,7 +3,7 @@ var image;
 var query;
 function getImage(){
 
-	var rand_int = (Math.floor(Math.random()*10)+1);
+	var rand_int = (Math.floor(Math.random()*60)+1);
 	whichField(function(choice) {
 		query = {
 				field: choice,
