@@ -22,12 +22,15 @@ function getImage(){
 					document.body.removeChild(DOM_img);
 				}*/
 				image = results3.project.modules[i].src;
-				//console.log(image);			
+				//console.log(image);
+				var imgLink = document.createElement("a");
+				imgLink.href = results3.project.url;			
 				var DOM_img = document.createElement("img");
 				DOM_img.src = image;
 				DOM_img.className = "Image";
+				imgLink.appendChild(DOM_img);
 				//DOM_img.id = "removeImg";
-				document.body.appendChild(DOM_img);
+				document.body.appendChild(imgLink);
 				var box = document.createElement("p");
 				//box.id = "removeBox";
 				var header = document.createElement("h1");
@@ -37,6 +40,11 @@ function getImage(){
 				header.appendChild(link);
 				link.appendChild(title);
 				box.appendChild(header);
+				var description = document.createElement("p");
+				var descriptionBody = document.createTextNode(results3.project.description);
+				description.appendChild(descriptionBody);
+				description.className = "itemDescription";
+				box.appendChild(description);
 				box.className = "Box";
 	
 				var views = document.createTextNode(results3.project.stats.views +" "+ "views");
