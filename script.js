@@ -16,20 +16,17 @@ function getImage(){
 			be(behance_api_key).project(results2.projects[rand2].id, function success(results3){
 				console.log(results3);
 				var i = 0;
-				while(results3.project.modules[i].type != "image"){i++;}
-				/*if(document.getElementById("removeImg") != null || document.getElementById("removeBox") != null){
-					document.body.removeChild(box);
-					document.body.removeChild(DOM_img);
-				}*/
-				image = results3.project.modules[i].src;
-				//console.log(image);
 				var imgLink = document.createElement("a");
-				imgLink.href = results3.project.url;			
-				var DOM_img = document.createElement("img");
-				DOM_img.src = image;
-				DOM_img.className = "Image";
-				imgLink.appendChild(DOM_img);
-				//DOM_img.id = "removeImg";
+				imgLink.href = results3.project.url;
+				for(var i = 0; i < results3.project.modules.length; i++){
+					if(results3.project.modules[i].type != "image"){continue;}
+					image = results3.project.modules[i].src;
+					var DOM_img = document.createElement("img");
+					DOM_img.src = image;
+					DOM_img.className = "image";
+					imgLink.appendChild(DOM_img);
+				}
+				imgLink.className = "imageBox";
 				document.body.appendChild(imgLink);
 				var box = document.createElement("p");
 				//box.id = "removeBox";
@@ -81,7 +78,8 @@ var scriptLike = function(){
 	//alert(query.field);
 	like(query.field);
 	$(".Box").remove();
-	$(".Image").remove();
+	$(".image").remove();
+	$(".imageBox").remove();
 	getImage();
 	};
 
@@ -89,7 +87,8 @@ var scriptDislike = function(){
 	console.log(query.field);
 	dislike(query.field);
 	$(".Box").remove();
-	$(".Image").remove();
+	$(".image").remove();
+	$(".imageBox").remove();
 	getImage();
 	};
 

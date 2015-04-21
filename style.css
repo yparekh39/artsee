@@ -4,7 +4,7 @@ body{
   background-color: rgba(197, 152, 101, .15);
 
 }
-.Image{
+.imageBox{
   display: block;
   border: 3px solid #C59865;
   padding:3px;
@@ -15,7 +15,14 @@ body{
   height: auto;
   width: auto;
 }
-
+.image{
+    max-width: 35em;
+    height: auto;
+    width: auto;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
 .Box{
    position:fixed;
    width:300px;
@@ -25,6 +32,12 @@ body{
    margin-right:50px;
    text-align:left;
    color:#828282;
+   height: auto;
+}
+.itemDescription{
+  height: 100%;
+  max-height: 200px;
+  overflow: scroll;
 }
 
 .Views{
